@@ -1,5 +1,6 @@
 > **Shared Responsibility Model** A security framework most cloud providers follow to divide duties between the customer and the provider. The provider secures the underlying infrastructure, while the customer secures their own data and configurations. 
 
+
 # Amazon Elastic Cloud Compute - EC2
 - An EC2 instance offers a client a virtual machine to run their application. There are different types of instances suited for different types of applications. General Purpose, Compute-optimised, and Memory-optimised are some examples.
 ### EC2 Pricing
@@ -16,4 +17,23 @@
 ### Messaging and Queuing
  -  **EventBridge** is a serverless service that helps connect different parts of an application using events
  -  **Amazon SQS** is a message queuing service that facilitates reliable communication between software components. It can send, store, and receive messages at any scale, making sure messages are not lost and that other services don't need to be available for processing.
- -  **Amazon SNS** is a publish-subscribe service that publishers use to send messages to subscribers through SNS topics. In Amazon SNS, subscribers can include web servers, email addresses, Lambda functions, and various other endpoints. 
+ -  **Amazon SNS** is a publish-subscribe service that publishers use to send messages to subscribers through SNS topics. In Amazon SNS, subscribers can include web servers, email addresses, Lambda functions, and various other endpoints.
+
+# Compute Services in AWS 
+> AWS offers managed, unmanaged and fully managed services, which decrease the responsibilities of the client respectively.
+ ## AWS Lambda
+  - In that is AWS Lambda, a serverless compute service that runs code in response to events without the need to provision or manage servers
+  - It automatically manages the underlying infrastructure, scaling resources based on the volume of requests. You are charged only for the compute time consumed, down to the millisecond.
+## Containers on AWS
+  - Amazon Elastic Container Service **(Amazon ECS)** is a scalable container orchestration service for running and managing containers on AWS.
+  - Amazon Elastic Kubernetes Service **(Amazon EKS)** is a fully managed service for running Kubernetes on AWS.
+  - Amazon Elastic Container Registry **(Amazon ECR)** is where you can store, manage, and deploy container images.
+  - **AWS Fargate** is a serverless compute engine for containers. It works with both Amazon ECS and Amazon EKS. Fargate is a container hosting platform, unlike Amazon ECS and Amazon EKS, which are both container orchestration services.
+  - The client can run their containers in EC2, where they configure the infrastructure and networking, or run them on Fargate, which is serverless.
+## Other Compute Services.
+1. **Elastic Beanstalk** is a fully managed service that streamlines the deployment, management, and scaling of web applications. Developers can upload their code, and Elastic Beanstalk automatically handles the provisioning of infrastructure, scaling, load balancing, and application health monitoring.
+    >  Good for: Deploying and managing web applications, RESTful APIs, mobile backend services, and microservices architectures
+2. **AWS Batch** is a fully managed service that you can use to run batch computing workloads on AWS.
+    >  Good for: Processing large-scale, parallel workloads in areas like scientific computing, financial risk analysis, media transcoding, big data processing, machine learning training, and genomics research
+3. **Amazon Lightsail** is a cloud service offering virtual private servers (VPSs), storage, databases, and networking at a predictable monthly price.
+4. **AWS Outposts** is a fully managed hybrid cloud solution that extends AWS infrastructure and services to on-premises data centres.
