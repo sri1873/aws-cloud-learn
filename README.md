@@ -54,11 +54,28 @@ AWS offers managed, unmanaged, and fully managed services, which reduce the clie
     1. Managing infrastructure with DevOps such as continuous integration and delivery (CI/CD) pipelines
     2. Managing infrastructure with DevOps such as continuous integration and delivery (CI/CD) pipelines
 
+---
 # AWS Networking
 **Virtual Private Cloud**(VPC) provides an isolated private cloud space to clients to host their resources without access to the internet.
 **Subnets** are a subsection of VPCs that help divide components that need to be private, like DBs, from public components like Web Apps.
 
 **Network Access Control Lists** are a firewall at the subnet level that maintains a stateless list of all the allowed addresses for the subnet. It checks incoming and outgoing packets for permission.
 **Security Groups** are a firewall at an instance level inside the subnet that maintains a stateful list of allowed addresses for the instance. It only checks incoming packets. 
+---
+# Storage
+### Block Storage
+  Storage is a big block with smaller blocks of data as bytes; when data is updated, the entire block is not rewritten.
+  1. **EC2 Instance Store** is the default type of storage that comes with an EC2 instance, as it is physically attached to it. A block of memory to store all data processing stuff.
+      1. Data is not persisted when the instance is terminated, as the instance might not run on the same resource.
+      2. Offers low cost and high performance as the storage is physically attached to the instance.
+  2. **Elastic Block Store** is the persisted version of block storage for EC2 instances. They act like pendrives.
+      1. They can easily be migrated using snapshots, which is also useful to recover lost data.
+      2. As they are separate blocks, they can easily be attached to different types of instances.
 
-   
+### Object Storage using S3
+**Simple Storage Service** or S3 bucket offers a fully managed object storage service; it is durable (stored in 3 centres at a time) and secure (provides temp access links and access groups can be set up.
+    - **S3 Object**  is the fundamental unit of data storage. When you upload a file to Amazon S3, it becomes an object and is stored durably across multiple facilities within your chosen Region.
+    - Objects can be of any file type, such as images, videos, documents, or application data, and can range in size from a few bytes to several terabytes.
+
+### Elastic File System (EFS) 
+Amazon EFS is a fully managed, scalable file storage service for use with AWS cloud services and on-premises resources. It operates using the Linux Network File System (NFS) protocol, and automatically scales to petabytes as you add or remove files without disrupting applications. EFS is designed to support a wide variety of workloads and can be accessed by multiple EC2 instances simultaneously.
