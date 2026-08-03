@@ -79,3 +79,11 @@ AWS offers managed, unmanaged, and fully managed services, which reduce the clie
 
 ### Elastic File System (EFS) 
 Amazon EFS is a fully managed, scalable file storage service for use with AWS cloud services and on-premises resources. It operates using the Linux Network File System (NFS) protocol, and automatically scales to petabytes as you add or remove files without disrupting applications. EFS is designed to support a wide variety of workloads and can be accessed by multiple EC2 instances simultaneously.
+
+---
+# Databases
+
+1. **Amazon RDS** is a managed relational database service that handles routine database tasks such as backups, patching, and hardware provisioning. Amazon RDS supports multiple database instance class types that optimize for memory, performance, or input/output (I/O).
+2. **DynamoDB** is a fully managed NoSQL database service that provides fast and predictable performance for both document and key-value data structures.
+3. **ElastiCache** is a fully managed in-memory caching service that was built to help reduce the complexity of administering in-memory caching systems. This means that you can continue to use the same Redis, Valkey, or Memcached tools and configurations to scale your workloads.
+4. AWS Neptune -> graphical DB | AWS DocumentDB -> MongoDB
